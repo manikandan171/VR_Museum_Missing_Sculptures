@@ -8,12 +8,18 @@ A Cost-Effective Virtual Reality Heritage Preservation Platform Using Unity and 
 Watch the interactive walkthroughs of the virtual museum experience. Use the controls on each player to play, pause, or adjust the video volume:
 
 ### 🎥 Primary Walkthrough Demo (Full Tour)
-<video src="Images/Screen%20Recording%202025-11-25%20103650.mp4" controls width="100%"></video>
+<video controls="controls" width="100%" preload="metadata">
+  <source src="https://raw.githubusercontent.com/manikandan171/VR_Museum_Missing_Sculptures/main/Images/Demo_Full_Walkthrough.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
 ### 🎥 Secondary Demo (Gaze & Locomotion)
-<video src="Images/1121(1).mp4" controls width="100%"></video>
+<video controls="controls" width="100%" preload="metadata">
+  <source src="https://raw.githubusercontent.com/manikandan171/VR_Museum_Missing_Sculptures/main/Images/Demo_Locomotion.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
