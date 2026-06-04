@@ -1,0 +1,9 @@
+PLACEHOLDER FILE
+
+This directory should contain: libvoiceai.so
+
+The .meta file is already configured correctly.
+You need to build the actual .so file using the build scripts in Assets/Plugins/Native/
+
+See BUILD_NATIVE_PLUGINS.md for instructions.
+

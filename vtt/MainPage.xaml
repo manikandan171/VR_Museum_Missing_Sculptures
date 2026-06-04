@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="VoiceToText.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Voice to Text">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+            
+            <!-- App Title -->
+            <Label x:Name="WelcomeLabel"
+                   Text="Voice to Text Converter"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+
+            <!-- Status Label -->
+            <Label x:Name="StatusLabel"
+                   Text="Ready to listen"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light={StaticResource Secondary}, Dark={StaticResource SecondaryDarkText}}" />
+
+            <!-- Record Button -->
+            <Button x:Name="RecordButton"
+                    Text="🎤 Start Recording"
+                    FontSize="18"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="60"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Clicked="OnRecordButtonClicked" />
+
+            <!-- Clear Button -->
+            <Button x:Name="ClearButton"
+                    Text="🗑️ Clear Text"
+                    FontSize="16"
+                    BackgroundColor="{StaticResource Secondary}"
+                    TextColor="White"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Clicked="OnClearButtonClicked" />
+
+            <!-- Recognized Text Display -->
+            <Frame BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
+                   BorderColor="{StaticResource Primary}"
+                   CornerRadius="10"
+                   Padding="20"
+                   HasShadow="True">
+                
+                <VerticalStackLayout>
+                    <Label Text="Recognized Text:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}"
+                           Margin="0,0,0,10" />
+                    
+                    <ScrollView HeightRequest="200">
+                        <Label x:Name="RecognizedTextLabel"
+                               Text="Your speech will appear here..."
+                               FontSize="16"
+                               TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
+                               LineBreakMode="WordWrap" />
+                    </ScrollView>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Copy Button -->
+            <Button x:Name="CopyButton"
+                    Text="📋 Copy Text"
+                    FontSize="16"
+                    BackgroundColor="{StaticResource Tertiary}"
+                    TextColor="White"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Clicked="OnCopyButtonClicked" />
+
+            <!-- Instructions -->
+            <Label Text="Tap the microphone button to start recording your voice. The recognized text will appear above."
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"
+                   Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
