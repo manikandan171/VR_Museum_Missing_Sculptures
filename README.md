@@ -7,13 +7,10 @@ A Cost-Effective Virtual Reality Heritage Preservation Platform Using Unity and 
 ## 🎬 Project Demo Video
 Watch the full walkthrough of the virtual museum experience:
 
-https://github.com/manikandan171/VR_Museum_Missing_Sculptures/assets/assets/user-attachments/media/example-video-id
-*(Note: Replace with your repository media URL or relative link below)*
-
-<video src="Images/Screen Recording 2025-11-25 103650.mp4" controls width="100%"></video>
+<video src="Images/Screen%20Recording%202025-11-25%20103650.mp4" controls width="100%"></video>
 
 > [!TIP]
-> If the video does not render in your local markdown viewer, you can directly play it at [Images/Screen Recording 2025-11-25 103650.mp4](file:///d:/hack-it-spaiens-2.0-main/Images/Screen%20Recording%202025-11-25%20103650.mp4) or check out the secondary video [Images/1121(1).mp4](file:///d:/hack-it-spaiens-2.0-main/Images/1121(1).mp4).
+> If the video does not render in your local markdown viewer, you can directly play it at [Images/Screen Recording 2025-11-25 103650.mp4](Images/Screen%20Recording%202025-11-25%20103650.mp4) or check out the secondary video [Images/1121(1).mp4](Images/1121(1).mp4).
 
 ---
 
@@ -21,23 +18,19 @@ https://github.com/manikandan171/VR_Museum_Missing_Sculptures/assets/assets/user
 
 ### 🏛️ The Main Museum Lobby (`SampleScene`)
 Explore the virtual gallery hub and gaze at the "Explore" panels to enter exhibit rooms.
-````carousel
-![Lobby - Nataraja (Dancing Shiva) Exhibit](Images/Screenshot%20(13).png)
-<!-- slide -->
-![Lobby - Sultanganj Buddha Exhibit](Images/Screenshot%20(14).png)
-<!-- slide -->
-![Lobby - Koh-i-Noor Crown Exhibit](Images/Screenshot%20(15).png)
-````
+
+| Lobby - Nataraja (Dancing Shiva) Exhibit | Lobby - Sultanganj Buddha Exhibit | Lobby - Koh-i-Noor Crown Exhibit |
+| :---: | :---: | :---: |
+| ![Lobby - Nataraja](Images/Screenshot%20(13).png) | ![Lobby - Sultanganj Buddha](Images/Screenshot%20(14).png) | ![Lobby - Koh-i-Noor Crown](Images/Screenshot%20(15).png) |
+
+---
 
 ### 🗿 Interactive Exhibit Galleries
 Once inside, users can trigger audio descriptions in multiple languages and read historical panels.
-````carousel
-![Nataraja Exhibit Room - Language & Audio Controls](Images/Screenshot%20(10).png)
-<!-- slide -->
-![Koh-i-Noor Room - Historical Archives](Images/Screenshot%20(11).png)
-<!-- slide -->
-![Koh-i-Noor Room - Detailed Crown Close-up](Images/Screenshot%20(12).png)
-````
+
+| Nataraja Exhibit - Audio & Language Controls | Koh-i-Noor Room - Historical Archives | Koh-i-Noor Room - Detailed Crown Close-up |
+| :---: | :---: | :---: |
+| ![Nataraja Controls](Images/Screenshot%20(10).png) | ![Koh-i-Noor Archives](Images/Screenshot%20(11).png) | ![Koh-i-Noor Crown Close-up](Images/Screenshot%20(12).png) |
 
 ---
 
@@ -85,16 +78,16 @@ Physical access to information about these missing treasures is limited. This pr
 The project consists of three main components:
 
 ### 1. Unity VR Museum Application
-- **Locomotion ([VRLookWalk.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/VRLookWalk.cs))**: Walk around by tilting your head downward (below $30^\circ$ by default) to move in the direction you are facing.
-- **Scene Transition ([GazeSceneLoader.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/Scenes/GazeSceneLoader.cs))**: Transition from the lobby to exhibit halls and exit doors back to the lobby by looking at the "Explore" or "Exit" signs.
-- **Audio Guides ([GazeLanguageButton.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/Scenes/scean2/GazeLanguageButton.cs) & [LanguageAudioPlayer.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/Scenes/scean2/LanguageAudioPlayer.cs))**: Select your preferred language (Tamil, Hindi, English) and play/pause/replay the historical explanation by gazing at the panels.
-- **Video Presentations ([videoButton.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/Video/videoButton.cs) & [LanguageVideoPlayer.cs](file:///d:/hack-it-spaiens-2.0-main/Assets/Video/LanguageVideoPlayer.cs))**: Gaze controls for playing, pausing, and replaying background documentaries on the main walls.
+- **Locomotion ([VRLookWalk.cs](Assets/VRLookWalk.cs))**: Walk around by tilting your head downward (below $30^\circ$ by default) to move in the direction you are facing.
+- **Scene Transition ([GazeSceneLoader.cs](Assets/Scenes/GazeSceneLoader.cs))**: Transition from the lobby to exhibit halls and exit doors back to the lobby by looking at the "Explore" or "Exit" signs.
+- **Audio Guides ([GazeLanguageButton.cs](Assets/Scenes/scean2/GazeLanguageButton.cs) & [LanguageAudioPlayer.cs](Assets/Scenes/scean2/LanguageAudioPlayer.cs))**: Select your preferred language (Tamil, Hindi, English) and play/pause/replay the historical explanation by gazing at the panels.
+- **Video Presentations ([videoButton.cs](Assets/Video/videoButton.cs) & [LanguageVideoPlayer.cs](Assets/Video/LanguageVideoPlayer.cs))**: Gaze controls for playing, pausing, and replaying background documentaries on the main walls.
 
 ### 2. Native Speech Recognition Plugin (VoiceAI)
-- **Native Android Plugins ([Assets/Assets/Plugins/Android/](file:///d:/hack-it-spaiens-2.0-main/Assets/Assets/Plugins/Android/))**: C++ wrapper files compiled for Android (`arm64-v8a` and `armeabi-v7a`) integrating `whisper.cpp` and `llama.cpp` for native speech recognition.
+- **Native Android Plugins ([Assets/Assets/Plugins/Android/](Assets/Assets/Plugins/Android/))**: C++ wrapper files compiled for Android (`arm64-v8a` and `armeabi-v7a`) integrating `whisper.cpp` and `llama.cpp` for native speech recognition.
 - Uses `ggml-base.bin` located in `StreamingAssets` for high-performance offline transcription on devices.
 
-### 3. Voice-to-Text companion App ([vtt/](file:///d:/hack-it-spaiens-2.0-main/vtt/))
+### 3. Voice-to-Text companion App ([vtt/](vtt/))
 - A cross-platform **.NET MAUI** voice-to-text converter application supporting Windows, Android, and iOS.
 - Offers recording capabilities, real-time transcription, and clipboard text sharing.
 
