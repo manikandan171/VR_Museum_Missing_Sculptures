@@ -7,9 +7,20 @@ A Cost-Effective Virtual Reality Heritage Preservation Platform Using Unity and 
 ## 🎬 Project Walkthrough Videos
 Watch the interactive walkthroughs of the virtual museum experience. Use the controls on each player to play, pause, or adjust the video volume:
 
-| 🎥 Primary Walkthrough Demo (Full Tour) | 🎥 Secondary Demo (Gaze & Locomotion) |
-| :---: | :---: |
-| <video src="Images/Screen%20Recording%202025-11-25%20103650.mp4" controls width="100%"></video> | <video src="Images/1121(1).mp4" controls width="100%"></video> |
+<table>
+  <tr>
+    <td align="center"><b>🎥 Primary Walkthrough Demo (Full Tour)</b></td>
+    <td align="center"><b>🎥 Secondary Demo (Gaze & Locomotion)</b></td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <video src="Images/Screen%20Recording%202025-11-25%20103650.mp4" controls width="100%"></video>
+    </td>
+    <td width="50%">
+      <video src="Images/1121(1).mp4" controls width="100%"></video>
+    </td>
+  </tr>
+</table>
 
 ---
 
